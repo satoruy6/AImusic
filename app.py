@@ -1,12 +1,20 @@
 import subprocess
-subprocess.run(["python", "-m", "pip", "install", "--upgrade", "pip"])
+subprocess.run(["python", "-m", "pip3", "install", "--upgrade", "pip"])
 subprocess.run(["sudo", "apt","update"])
 subprocess.run(["sudo", "apt", "install", "libfluidsynth2"])
 subprocess.run(["sudo", "apt", "install", "fluid-soundfont-gm"])
 subprocess.run(["sudo", "apt", "install", "build-essential"])
 subprocess.run(["sudo", "apt", "install", "libasound2-dev"])
 subprocess.run(["sudo", "apt", "install", "libjack-dev"])
+import os
+os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
+import setuptools
 
+setuptools.setup(
+    # その他のオプションを記述
+    use_2to3_fixers=None,
+    use_2to3_exclude_fixers=None,
+)
 import streamlit as st
 st.set_page_config(page_title="AImusic app")
 st.title("Compose Music using AI")
