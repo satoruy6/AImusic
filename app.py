@@ -1,6 +1,7 @@
 import subprocess
 subprocess.run(["pip3", "install", "python3"])
 subprocess.run(["python", "-m", "pip3", "install", "--upgrade", "pip"])
+subprocess.run(["python", "-m", "pip3", "install", "--upgrade", "setuptools"])
 subprocess.run(["sudo", "apt","update"])
 subprocess.run(["sudo", "apt", "install", "libfluidsynth2"])
 subprocess.run(["sudo", "apt", "install", "fluid-soundfont-gm"])
