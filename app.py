@@ -1,4 +1,5 @@
 import subprocess
+subprocess.run(["pip3", "install", "ez_setup"])
 subprocess.run(["pip3", "install", "python3"])
 subprocess.run(["python", "-m", "pip3", "install", "--upgrade", "pip"])
 subprocess.run(["python", "-m", "pip3", "install", "--upgrade", "setuptools"])
