@@ -1,4 +1,13 @@
+import subprocess
+subprocess.run(["sudo", "apt","update"])
+subprocess.run(["sudo", "apt", "install", "libfluidsynth2"])
+subprocess.run(["sudo", "apt", "install", "fluid-soundfont-gm"])
+subprocess.run(["sudo", "apt", "install", "build-essential"])
+subprocess.run(["sudo", "apt", "install", "libasound2-dev"])
+subprocess.run(["sudo", "apt", "install", "libjack-dev"])
+
 import streamlit as st
+st.set_page_config(page_title="AImusic app")
 st.title("Compose Music using AI")
 st.text("This site uses AI to compose a short piece of music of approximately 30 seconds.")
 st.text("It takes a few minutes to compose.")
