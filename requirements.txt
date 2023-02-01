@@ -8,3 +8,4 @@ note_seq==0.0.3
 numba==0.49.1
 numpy==1.21.6
 llvmlite==0.32.1
+python-rtmidi==1.1.2
