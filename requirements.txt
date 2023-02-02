@@ -169,7 +169,7 @@ ipywidgets==7.7.1
 itsdangerous==1.1.0
 jax==0.3.25
 
-jedi==0.18.2
+jedi==0.10.0
 jieba==0.42.1
 Jinja2==2.11.3
 joblib==1.2.0
