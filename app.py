@@ -39,8 +39,6 @@ from magenta.music.sequences_lib import concatenate_sequences
 
 import note_seq
 
-import os
-
 BATCH_SIZE = 4  # 一度に扱うデータ数
 Z_SIZE = 512  # 潜在変数の数
 TOTAL_STEPS = 512  # コードのベクトル化に使用
@@ -102,4 +100,12 @@ seq = concatenate_sequences(seqs)
 #mm.play_sequence(seq, synth=mm.fluidsynth)
 
 note_seq.sequence_proto_to_midi_file(seq, "AImusic.mid")  #MIDI　データに変換し保存
-st.download_button("Download midi file", open(os.path.join("AImusic.mid"), "br"), "AImusic.mid")  # ダウンロード
+#st.download_button("Download midi file", open(os.path.join("AImusic.mid"), "br"), "AImusic.mid")  # ダウンロード
+try:
+  with open('AImusic.mid', 'rb') as f:
+    content = f.read()
+except FileNotFoundError:
+  st.error("Error: File not Found")
+except PermissionError:
+  st.error("Error: Permission Denied")
+st.download_button("Download midi file", content, "AImusic.mid")
