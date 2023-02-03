@@ -11,13 +11,7 @@ subprocess.run(["apt", "install", "libjack-dev"])
 subprocess.run(["apt-get", "install", "libsndfile1"])
 import os
 os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
-#import setuptools
 
-#setuptools.setup(
-    # その他のオプションを記述
-    #use_2to3_fixers=None,
-    #use_2to3_exclude_fixers=None,
-#)
 import streamlit as st
 st.set_page_config(page_title="AImusic app")
 st.title("Compose Music using AI")
@@ -33,12 +27,12 @@ st.video("https://youtu.be/aPYcGthKrXo", format="video/mp4", start_time=0)
 
 if st.button('recompose'):
     st.experimental_rerun()
-else:
-    none=0
+
 st.text("When the composition is complete, a download button will appear below.")
 
 import numpy as np
 #from google.colab import files
+import files
 
 import magenta.music as mm
 from magenta.models.music_vae import configs
@@ -111,12 +105,3 @@ seq = concatenate_sequences(seqs)
 
 note_seq.sequence_proto_to_midi_file(seq, "AImusic.mid")  #MIDI　データに変換し保存
 st.download_button("Download midi file", open(os.path.join("AImusic.mid"), "br"), "AImusic.mid")  # ダウンロード
-
-#import subprocess
-
-#midi_file = 'AImusic.mid'
-#wav_file = 'AImusic.wav'
-
-#subprocess.run(['midi2audio', midi_file, wav_file])
-
-#st.audio("AImusic.wav", format="audio/wav")
