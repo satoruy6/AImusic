@@ -1,14 +1,14 @@
-import subprocess
-subprocess.run(["pip3", "install", "ez_setup"])
-subprocess.run(["python", "-m", "pip", "install", "--upgrade", "pip"])
-subprocess.run(["python", "-m", "pip", "install", "--upgrade", "setuptools"])
-subprocess.run(["apt","update"])
-subprocess.run(["apt", "install", "libfluidsynth2"])
-subprocess.run(["apt", "install", "fluid-soundfont-gm"])
-subprocess.run(["apt", "install", "build-essential"])
-subprocess.run(["apt", "install", "libasound2-dev"])
-subprocess.run(["apt", "install", "libjack-dev"])
-subprocess.run(['sudo', 'apt-get', 'install', 'libsndfile1'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+#import subprocess
+#subprocess.run(["pip3", "install", "ez_setup"])
+#subprocess.run(["python", "-m", "pip", "install", "--upgrade", "pip"])
+#subprocess.run(["python", "-m", "pip", "install", "--upgrade", "setuptools"])
+#subprocess.run(["apt","update"])
+#subprocess.run(["apt", "install", "libfluidsynth2"])
+#subprocess.run(["apt", "install", "fluid-soundfont-gm"])
+#subprocess.run(["apt", "install", "build-essential"])
+#subprocess.run(["apt", "install", "libasound2-dev"])
+#subprocess.run(["apt", "install", "libjack-dev"])
+#subprocess.run(['apt-get', 'install', 'libsndfile1'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 import os
 os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
 
