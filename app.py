@@ -8,7 +8,7 @@ subprocess.run(["apt", "install", "fluid-soundfont-gm"])
 subprocess.run(["apt", "install", "build-essential"])
 subprocess.run(["apt", "install", "libasound2-dev"])
 subprocess.run(["apt", "install", "libjack-dev"])
-subprocess.run(["apt-get", "install", "libsndfile1"])
+subprocess.run(['sudo', 'apt-get', 'install', 'libsndfile1'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 import os
 os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
 
