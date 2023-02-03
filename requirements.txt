@@ -311,7 +311,7 @@ pymongo==4.3.3
 Pympler==1.0.1
 pymystem3==0.2.0
 pyngrok==4.1.1
-PyOpenGL==3.1.6
+
 
 
 
