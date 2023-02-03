@@ -1,13 +1,13 @@
 import subprocess
 subprocess.run(["pip3", "install", "ez_setup"])
-subprocess.run(["python", "-m", "pip3", "install", "--upgrade", "pip"])
-subprocess.run(["python", "-m", "pip3", "install", "--upgrade", "setuptools"])
-subprocess.run(["sudo", "apt","update"])
-subprocess.run(["sudo", "apt", "install", "libfluidsynth2"])
-subprocess.run(["sudo", "apt", "install", "fluid-soundfont-gm"])
-subprocess.run(["sudo", "apt", "install", "build-essential"])
-subprocess.run(["sudo", "apt", "install", "libasound2-dev"])
-subprocess.run(["sudo", "apt", "install", "libjack-dev"])
+subprocess.run(["python", "-m", "pip", "install", "--upgrade", "pip"])
+subprocess.run(["python", "-m", "pip", "install", "--upgrade", "setuptools"])
+subprocess.run(["apt","update"])
+subprocess.run(["apt", "install", "libfluidsynth2"])
+subprocess.run(["apt", "install", "fluid-soundfont-gm"])
+subprocess.run(["apt", "install", "build-essential"])
+subprocess.run(["apt", "install", "libasound2-dev"])
+subprocess.run(["apt", "install", "libjack-dev"])
 import os
 os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
 #import setuptools
