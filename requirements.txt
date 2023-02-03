@@ -312,7 +312,7 @@ Pympler==1.0.1
 pymystem3==0.2.0
 pyngrok==4.1.1
 PyOpenGL==3.1.6
-pyparsing==3.0.9
+
 
 
 
@@ -438,4 +438,4 @@ yellowbrick==1.5
 zict==2.2.0
 zipp==3.11.0
 
-pip==x.y.z
+pip==
