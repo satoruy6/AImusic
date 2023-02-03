@@ -37,7 +37,7 @@ else:
 st.text("When the composition is complete, a download button will appear below.")
 
 import numpy as np
-from google.colab import files
+#from google.colab import files
 
 import magenta.music as mm
 from magenta.models.music_vae import configs
