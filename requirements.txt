@@ -281,7 +281,7 @@ prophet==1.1.1
 proto-plus==1.22.2
 protobuf==3.19.6
 psutil==5.4.8
-psycopg2==2.9.5
+
 ptyprocess==0.7.0
 py==1.11.0
 pyarrow==9.0.0
@@ -438,4 +438,3 @@ yellowbrick==1.5
 zict==2.2.0
 zipp==3.11.0
 
-psycopg2-binary
