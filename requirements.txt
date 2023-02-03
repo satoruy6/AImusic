@@ -1,7 +1,6 @@
 pip==23.0
-streamlit
-pyfluidsynth
-pretty_midi
-magenta
-midi2audio
-google.colab
+streamlit==1.17.0
+pyfluidsynth==1.3.1
+pretty_midi==0.2.9
+magenta==2.1.4
+midi2audio==0.1.1
