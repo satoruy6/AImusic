@@ -1,4 +1,5 @@
 pip==23.0
 streamlit==1.17.0
-magenta==2.1.4
-note-seq
+magenta
+tensorflow
+numpy
