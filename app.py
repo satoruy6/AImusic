@@ -37,6 +37,7 @@ from magenta.models.music_vae import configs
 from magenta.models.music_vae.trained_model import TrainedModel
 from magenta.music.sequences_lib import concatenate_sequences
 
+import libsndfile
 import note_seq
 
 BATCH_SIZE = 4  # 一度に扱うデータ数
