@@ -4,4 +4,4 @@ magenta
 tensorflow-cpu
 gsutil
 pysoundfile
-sndfile
+pysndfile
