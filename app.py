@@ -1,6 +1,6 @@
 import os
 os.system("python -m pip install --upgrade pip")
-os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* ./")
+os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
 
 import streamlit as st
 st.set_page_config(page_title="AImusic app")
