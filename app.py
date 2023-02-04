@@ -10,7 +10,7 @@
 #subprocess.run(["apt", "install", "libjack-dev"])
 #subprocess.run(['apt-get', 'install', 'libsndfile1'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 import os
-os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
+os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* ./")
 
 import streamlit as st
 st.set_page_config(page_title="AImusic app")
@@ -100,7 +100,7 @@ seq = concatenate_sequences(seqs)
 #mm.play_sequence(seq, synth=mm.fluidsynth)
 
 note_seq.sequence_proto_to_midi_file(seq, "AImusic.mid")  #MIDI　データに変換し保存
-#st.download_button("Download midi file", open(os.path.join("AImusic.mid"), "br"), "AImusic.mid")  # ダウンロード
+st.download_button("Download midi file", open(os.path.join("AImusic.mid"), "br"), "AImusic.mid")  # ダウンロード
 try:
   with open('AImusic.mid', 'rb') as f:
     content = f.read()
