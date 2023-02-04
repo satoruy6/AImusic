@@ -3,3 +3,15 @@ fluid-soundfont-gm
 build-essential 
 libasound2-dev 
 libjack-dev
+autoconf 
+autogen 
+automake  
+libflac-dev 
+libogg-dev 
+libtool 
+libvorbis-dev 
+libopus-dev 
+libmp3lame-dev
+libmpg123-dev 
+pkg-config 
+python

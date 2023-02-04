@@ -1,7 +1,10 @@
 import os
 os.system("python -m pip install --upgrade pip")
 os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* ./")
-os.system("pip install pysoundfile")
+os.system("autoreconf -vif")
+os.system("./configure --enable-werror")
+os.system("make")
+os.system("make check")
 
 import streamlit as st
 st.set_page_config(page_title="AImusic app")
