@@ -1,8 +1,11 @@
 import os
 os.system("python -m pip install --upgrade pip")
-os.system("curl https://sdk.cloud.google.com | bash")
-os.system("gcloud init")
-os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
+#os.system("curl https://sdk.cloud.google.com | bash")
+#os.system("gcloud init")
+#os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
+os.system("mkdir /content/")
+os.system("cd /content/")
+os.system("wget gs://download.magenta.tensorflow.org/models/music_vae/multitrack/*")
 
 import streamlit as st
 st.set_page_config(page_title="AImusic app")
