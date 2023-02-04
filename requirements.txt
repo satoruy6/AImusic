@@ -4,3 +4,4 @@ magenta
 tensorflow-cpu
 gsutil
 pysoundfile
+numba==0.48.0
