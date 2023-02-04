@@ -11,6 +11,8 @@
 #subprocess.run(['apt-get', 'install', 'libsndfile1'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 import os
 os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* ./")
+os.system("python -m pip install --upgrade pip")
+os.system("pip install sndfile")
 
 import streamlit as st
 st.set_page_config(page_title="AImusic app")
