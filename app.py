@@ -1,5 +1,7 @@
 import os
 os.system("python -m pip install --upgrade pip")
+os.system("curl https://sdk.cloud.google.com | bash")
+os.system("gcloud init")
 os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* /content/")
 
 import streamlit as st
