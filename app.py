@@ -1,7 +1,7 @@
 import os
 os.system("python -m pip install --upgrade pip")
-os.system("sudo apt-get update")
-os.system("sudo apt-get install -qq libfluidsynth2 fluid-soundfont-gm build-essential libasound2-dev libjack-dev")
+os.system("apt-get update")
+os.system("apt-get install -qq libfluidsynth2 fluid-soundfont-gm build-essential libasound2-dev libjack-dev")
 os.system("gsutil -q -m cp gs://download.magenta.tensorflow.org/models/music_vae/multitrack/* ./")
 os.system("pip install sndfile")
 
