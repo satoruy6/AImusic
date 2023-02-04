@@ -31,7 +31,6 @@ from magenta.models.music_vae import configs
 from magenta.models.music_vae.trained_model import TrainedModel
 from magenta.music.sequences_lib import concatenate_sequences
 
-import libsndfile
 import note_seq
 
 BATCH_SIZE = 4  # 一度に扱うデータ数
@@ -95,7 +94,7 @@ seq = concatenate_sequences(seqs)
 #mm.play_sequence(seq, synth=mm.fluidsynth)
 
 note_seq.sequence_proto_to_midi_file(seq, "AImusic.mid")  #MIDI　データに変換し保存
-st.download_button("Download midi file", open(os.path.join("AImusic.mid"), "br"), "AImusic.mid")  # ダウンロード
+#st.download_button("Download midi file", open(os.path.join("AImusic.mid"), "br"), "AImusic.mid")  # ダウンロード
 try:
   with open('AImusic.mid', 'rb') as f:
     content = f.read()
