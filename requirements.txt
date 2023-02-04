@@ -3,4 +3,4 @@ streamlit==1.17.0
 magenta
 tensorflow-cpu
 gsutil
-libsndfile-python
+libsndfile
