@@ -1,0 +1,5 @@
+libfluidsynth2 
+fluid-soundfont-gm 
+build-essential 
+libasound2-dev 
+libjack-dev
